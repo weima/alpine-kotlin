@@ -1,6 +1,6 @@
 FROM frolvlad/alpine-oraclejdk8:slim
 
-ENV KOTLIN_VERSION=1.0.0-beta-3595 \
+ENV KOTLIN_VERSION=1.0.0 \
     KOTLIN_HOME=/usr/share/kotlin
 
 RUN apk add --update bash && \
