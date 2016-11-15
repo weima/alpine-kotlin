@@ -6,7 +6,7 @@ ENV KOTLIN_VERSION=1.0.5 \
 RUN apk add --update bash && \
     apk add --virtual=build-dependencies wget ca-certificates && \
     cd /tmp && \
-    wget "https://github.com/JetBrains/kotlin/releases/download/${KOTLIN_VERSION}/kotlin-compiler-${KOTLIN_VERSION}.zip" && \
+    wget "https://github.com/JetBrains/kotlin/releases/download/v${KOTLIN_VERSION}/kotlin-compiler-${KOTLIN_VERSION}.zip" && \
     unzip "kotlin-compiler-${KOTLIN_VERSION}.zip" && \
     mkdir "${KOTLIN_HOME}" && \
     rm "/tmp/kotlinc/bin/"*.bat && \
