@@ -1,6 +1,6 @@
 FROM frolvlad/alpine-oraclejdk8:slim
 
-ENV KOTLIN_VERSION=1.1.1 \
+ENV KOTLIN_VERSION=1.1.4 \
     KOTLIN_HOME=/usr/share/kotlin
 
 RUN apk add --update bash && \
@@ -13,4 +13,4 @@ RUN apk add --update bash && \
     mv "/tmp/kotlinc/bin" "/tmp/kotlinc/lib" "${KOTLIN_HOME}" && \
     ln -s "${KOTLIN_HOME}/bin/"* "/usr/bin/" && \
     apk del build-dependencies && \
-    rm -rf /tmp/* /var/cache/apk/*
+    rm -rf /tmp/* /var/cache/apk/* 
